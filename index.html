@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>P.Sri Ram Reddy</h1>
+        </div>
+        <p class="tagline">Aspiring Web Developer & Designer</p>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <img src="assets/images/your-image2.jpg" alt="Your Name" class="profile-pic">
+        <h2>About Me</h2>
+        <p>Hello! I'm a web developer with a passion for creating beautiful and functional websites. I have experience in HTML, CSS, JavaScript, and a bit of backend development.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML & CSS</li>
+            <li>JavaScript</li>
+            <li>Responsive Design</li>
+            <li>Version Control (Git)</li>
+            <li>Basic Python</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        
+        <!-- Project 1: Business Page with Multiple Services -->
+        <div class="project">
+            <img src="assets/images/project1-image.jpg" alt="Business Page Project">
+            <h3>Business Page with Multiple Services</h3>
+            <p>This project involved creating a business landing page that showcases multiple services offered by a company. The page features sections for each service, with custom icons, descriptions, and a responsive layout. I used HTML, CSS, and some JavaScript for interactivity.</p>
+        </div>
+        
+        <!-- Project 2: Portfolio with Resume Download -->
+        <div class="project">
+            <img src="assets/images/project2-image.jpg" alt="Portfolio Project">
+            <h3>Personal Portfolio with Resume Download</h3>
+            <p>This portfolio project (the one you're currently viewing) is a showcase of my work and skills. It includes a downloadable resume feature, responsive design, and a clean, modern layout. The site is built using HTML, CSS, and is fully responsive across devices.</p>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume">
+        <h2>Resume</h2>
+        <a href="assets/resume/MY Resume (2).pdf" download>Download My Resume</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <a href="mailto:padalasriramreddy7@gmail.com">Email Me</a>
+        <p>Phone: +91 9347531613</p>
+    </section>
+    <script>
+       // JavaScript to Trigger Animation
+document.getElementById('downloadBtn').addEventListener('click', function(e) {
+    e.preventDefault(); // Prevents the default action for a moment
+
+    const downloadBtn = this;
+    
+    // Add the animation class
+    downloadBtn.classList.add('download-animate');
+
+    // Wait for the animation to finish before removing the class and starting the download
+    setTimeout(() => {
+        // Trigger the download after animation completes
+        window.location.href = downloadBtn.href;
+
+        // Remove the animation class so it can be triggered again later
+        downloadBtn.classList.remove('download-animate');
+    }, 400); // This should match the duration of the animation
+});
+
+
+    </script>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <a href="#about">Back to top</a>
+    </footer>
+</body>
+</html>
